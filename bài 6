@@ -1,0 +1,48 @@
+Bài làm: Nhận diện mối quan hệ giữa các thực thể
+
+1. Mối quan hệ giữa Người hướng dẫn và Lớp học
+Phân tích:
+Từ bảng “Danh sách lớp học” ta có dữ liệu sau:
+
+Mã lớp	Tên lớp	Người hướng dẫn
+G101	Guitar Đệm hát Cơ bản	Anh Tuấn
+G102	Guitar Cổ điển Vỡ lòng	Chị Mai
+G201	Guitar Đệm hát Nâng cao	Anh Tuấn
+
+Quan sát cho thấy:
+“Anh Tuấn” hướng dẫn hai lớp khác nhau (G101 và G201).
+“Chị Mai” hướng dẫn một lớp (G102).
+Mỗi lớp chỉ có một người hướng dẫn duy nhất.
+
+Kết luận:
+Một người hướng dẫn có thể phụ trách nhiều lớp học, nhưng mỗi lớp học chỉ có một người hướng dẫn.
+Do đó, mối quan hệ giữa Người hướng dẫn và Lớp học là Một – Nhiều (1:N).
+
+Giải thích:
+
+Trong thực tế, một giáo viên có thể dạy nhiều lớp.
+Mỗi lớp chỉ có một người hướng dẫn chính.
+Vì vậy, quan hệ được xác định là 1 người hướng dẫn → nhiều lớp học.
+
+2. Mối quan hệ giữa Thành viên và Lớp học
+Phân tích:
+Từ bảng “Danh sách đăng ký” ta có dữ liệu sau:
+Tên thành viên	Mã lớp đã đăng ký
+Nguyễn Văn An	G101
+Trần Thị Bình	G101
+Nguyễn Văn An	G201
+Lê Văn Cường	G102
+
+Quan sát cho thấy:
+Một thành viên (Nguyễn Văn An) có thể đăng ký nhiều lớp học (G101 và G201).
+Một lớp học (G101) có nhiều thành viên đăng ký (Nguyễn Văn An và Trần Thị Bình).
+
+Kết luận:
+Một thành viên có thể đăng ký nhiều lớp, và một lớp học cũng có thể có nhiều thành viên đăng ký.
+Do đó, mối quan hệ giữa Thành viên và Lớp học là Nhiều – Nhiều (M:N).
+
+Giải thích:
+Một người học có thể tham gia nhiều lớp trong cùng hoặc khác khóa.
+Một lớp học thường có nhiều học viên tham gia.
+
+Để quản lý mối quan hệ này, cần có bảng trung gian (ví dụ: bảng Đăng ký) lưu thông tin về việc thành viên nào đăng ký lớp nào.
